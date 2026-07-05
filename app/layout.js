@@ -5,10 +5,10 @@ import Navbar from "./components/Navbar";
 const dmserif = DM_Serif_Display({ variable: "--font-dmserif", subsets: ["latin"], weight: "400" });
 const jakarta = Plus_Jakarta_Sans({ variable: "--font-jakarta", subsets: ["latin"] });
 
-const __jsonld = {"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Cissy Coffee","description":"Premium coffee experience","url":"https://landing-cissycoffee.vercel.app","areaServed":"ID"};
+const __jsonld = {"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Cissy Coffee","description":"Premium coffee experience","url":"https://cissycoffee.pintuweb.com","areaServed":"ID"};
 
 export const metadata = {
-  metadataBase: new URL("https://landing-cissycoffee.vercel.app"),
+  metadataBase: new URL("https://cissycoffee.pintuweb.com"),
   title: "Cissy Coffee — Premium Coffee Experience",
   description: "Cissy Coffee: biji kopi pilihan, racikan barista berpengalaman, dan suasana cozy yang instagrammable.",
   applicationName: "Cissy Coffee",
@@ -16,11 +16,11 @@ export const metadata = {
   authors: [{ name: "Cissy Coffee" }],
   creator: "Cissy Coffee",
   publisher: "Cissy Coffee",
-  alternates: { canonical: "https://landing-cissycoffee.vercel.app" },
+  alternates: { canonical: "https://cissycoffee.pintuweb.com" },
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://landing-cissycoffee.vercel.app",
+    url: "https://cissycoffee.pintuweb.com",
     siteName: "Cissy Coffee",
     title: "Cissy Coffee — Premium Coffee Experience",
     description: "Cissy Coffee: biji kopi pilihan, racikan barista berpengalaman, dan suasana cozy yang instagrammable.",
