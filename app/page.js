@@ -1,6 +1,5 @@
 import Cover from "./components/Cover";
 import About from "./components/About";
-import Founder from "./components/Founder";
 import Menu from "./components/Menu";
 import BestServices from "./components/BestServices";
 import SWOTAnalysis from "./components/SWOTAnalysis";
@@ -14,7 +13,6 @@ export default function Home() {
     <main>
       <Cover />
       <About />
-      <Founder />
       <Menu />
       <CoffeeMenu />
       <FoodMenuGrid />

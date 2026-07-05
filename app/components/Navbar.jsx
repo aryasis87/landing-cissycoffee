@@ -70,7 +70,9 @@ export default function Navbar() {
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 0.8, ease: "anticipate" }}
       className={`fixed top-3 md:top-4 lg:top-5 left-1/2 -translate-x-1/2 p-3 rounded-full flex space-x-4 md:space-x-5 lg:space-x-6 z-50 transition-all duration-300 ${
-        isNavbarFixed ? "bg-black/30 backdrop-blur-sm shadow-lg" : "bg-black/40"
+        isNavbarFixed 
+          ? "bg-white/90 backdrop-blur-lg shadow-lg border border-orange-200/50" 
+          : "bg-white/70 backdrop-blur-md border border-orange-100/30"
       }`}
     >
       {navItems.map((item, index) => (
@@ -97,9 +99,11 @@ const NavItem = ({ id, label, icon, isActive, delay }) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay, ease: "easeOut" }}
       whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.55 }}
-      className={`relative p-2 rounded-full transition duration-300 focus:outline-none focus:ring focus:ring-yellow-400 ${
-        isActive ? "text-orange-200" : "hover:bg-orange-200 hover:text-black"
+      whileTap={{ scale: 0.95 }}
+      className={`relative p-2 rounded-full transition duration-300 focus:outline-none focus:ring-2 focus:ring-orange-300/50 ${
+        isActive 
+          ? "text-orange-600 bg-orange-100/50" 
+          : "text-gray-600 hover:bg-orange-50 hover:text-orange-600"
       }`}
       aria-label={label}
     >
@@ -107,7 +111,7 @@ const NavItem = ({ id, label, icon, isActive, delay }) => {
       {isActive && (
         <motion.div
           layoutId="underline"
-          className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3 h-1 bg-orange-200 rounded-full"
+          className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3 h-1 bg-gradient-to-r from-orange-400 to-orange-500 rounded-full"
         />
       )}
     </motion.a>
