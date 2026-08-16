@@ -32,14 +32,14 @@ export default function Contact() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100 pt-16">
+    <section className="relative overflow-hidden bg-gradient-to-br from-crema-2 to-crema-2 pt-16">
             {/* Tombol Home */}
             <div className="absolute top-6 left-6">
         <Link href="/">
           <motion.button 
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className="flex items-center px-4 py-2 bg-gray-800 text-white rounded-full shadow-lg"
+            className="flex items-center px-4 py-2 bg-roast text-crema rounded-full shadow-lg"
           >
             <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9.5L12 3l9 6.5M4 10v10a1 1 0 001 1h4a1 1 0 001-1v-6h4v6a1 1 0 001 1h4a1 1 0 001-1V10" />
@@ -85,13 +85,13 @@ export default function Contact() {
         >
           <motion.h1
             variants={fadeInUp}
-            className="text-5xl lg:text-6xl font-extrabold text-gray-900 mb-4"
+            className="text-5xl lg:text-6xl font-extrabold text-roast mb-4"
           >
             Hubungi Kami
           </motion.h1>
           <motion.p
             variants={fadeInUp}
-            className="text-xl lg:text-2xl text-gray-700"
+            className="text-xl lg:text-2xl text-roast"
           >
             Kami siap membantu Anda 24/7. Hubungi kami melalui informasi di bawah ini atau
             kirimkan pesan langsung.
@@ -109,37 +109,37 @@ export default function Contact() {
           {/* Contact Information */}
           <motion.div variants={fadeInLeft} className="space-y-8">
             <div className="flex items-center space-x-4">
-              <FaMapMarkerAlt className="text-3xl text-gray-600" />
+              <FaMapMarkerAlt className="text-3xl text-bean" />
               <div>
-                <h3 className="text-2xl font-bold text-gray-900">Alamat</h3>
-                <p className="text-gray-600">
+                <h3 className="text-2xl font-bold text-roast">Alamat</h3>
+                <p className="text-bean">
                   Jl. Penerbangan No. 123, Jakarta, Indonesia
                 </p>
               </div>
             </div>
             <div className="flex items-center space-x-4">
-              <FaPhoneAlt className="text-3xl text-gray-600" />
+              <FaPhoneAlt className="text-3xl text-bean" />
               <div>
-                <h3 className="text-2xl font-bold text-gray-900">Telepon</h3>
-                <p className="text-gray-600">+62 21 12345678</p>
+                <h3 className="text-2xl font-bold text-roast">Telepon</h3>
+                <p className="text-bean">+62 21 12345678</p>
               </div>
             </div>
             <div className="flex items-center space-x-4">
-              <FaEnvelope className="text-3xl text-gray-600" />
+              <FaEnvelope className="text-3xl text-bean" />
               <div>
-                <h3 className="text-2xl font-bold text-gray-900">Email</h3>
-                <p className="text-gray-600">info@skywings.co.id</p>
+                <h3 className="text-2xl font-bold text-roast">Email</h3>
+                <p className="text-bean">info@skywings.co.id</p>
               </div>
             </div>
             {/* Social Media Links */}
             <div className="flex items-center space-x-6 pt-4">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-gray-600 hover:text-gray-800">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-bean hover:text-roast">
                 <FaFacebookF className="text-2xl" />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-gray-600 hover:text-gray-800">
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-bean hover:text-roast">
                 <FaTwitter className="text-2xl" />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-gray-600 hover:text-gray-800">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-bean hover:text-roast">
                 <FaInstagram className="text-2xl" />
               </a>
             </div>
@@ -149,7 +149,7 @@ export default function Contact() {
           <motion.form
             variants={fadeInRight}
             onSubmit={handleSubmit}
-            className="bg-white p-8 rounded-3xl shadow-2xl space-y-5"
+            className="bg-crema p-8 rounded-3xl shadow-2xl space-y-5"
           >
             <div className="grid gap-6">
               <motion.input
@@ -162,7 +162,7 @@ export default function Contact() {
                   setFormData({ ...formData, name: e.target.value })
                 }
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 transition-all"
+                className="w-full px-4 py-3 border border-roast/12 rounded-lg focus:outline-none focus:ring-2 focus:ring-chalk-line transition-all"
               />
               <motion.input
                 variants={fadeInUp}
@@ -174,7 +174,7 @@ export default function Contact() {
                   setFormData({ ...formData, email: e.target.value })
                 }
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 transition-all"
+                className="w-full px-4 py-3 border border-roast/12 rounded-lg focus:outline-none focus:ring-2 focus:ring-chalk-line transition-all"
               />
               <motion.textarea
                 variants={fadeInUp}
@@ -185,21 +185,21 @@ export default function Contact() {
                   setFormData({ ...formData, message: e.target.value })
                 }
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 transition-all h-36"
+                className="w-full px-4 py-3 border border-roast/12 rounded-lg focus:outline-none focus:ring-2 focus:ring-chalk-line transition-all h-36"
               />
             </div>
             <motion.button
               variants={fadeInUp}
               type="submit"
               disabled={status === "loading"}
-              className="w-full px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition disabled:opacity-50"
+              className="w-full px-6 py-3 bg-roast text-crema rounded-lg hover:bg-roast transition disabled:opacity-50"
             >
               {status === "loading" ? "Mengirim..." : "Kirim Pesan"}
             </motion.button>
             {status === "success" && (
               <motion.p
                 variants={fadeInUp}
-                className="text-green-600 text-center"
+                className="text-chalk-line text-center"
               >
                 Pesan berhasil terkirim!
               </motion.p>
@@ -207,7 +207,7 @@ export default function Contact() {
             {status === "error" && (
               <motion.p
                 variants={fadeInUp}
-                className="text-red-600 text-center"
+                className="text-chalk-line text-center"
               >
                 Terjadi kesalahan. Silakan coba lagi.
               </motion.p>

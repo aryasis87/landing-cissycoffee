@@ -1,78 +1,38 @@
 @import "tailwindcss";
 
-h1, h2, h3 { font-family: var(--font-dmserif), Georgia, serif; letter-spacing: 0; }
-body { font-family: var(--font-jakarta), system-ui, sans-serif; }
+/* ==========================================================================
+   cissycoffee — bahasa rupa PAPAN MENU KAPUR.
+   Kedai kopi menulis menunya dengan kapur di papan gelap: serif tebal, garis
+   tangan, angka yang ditulis ulang tiap hari. Hangat, bukan steril.
+   ========================================================================== */
 
-:root {
-  --background: #ffffff;
-  --foreground: #321e07;
-  
-  /* Elegant Orange Pastel Palette */
-  --orange-50: #fef7f0;
-  --orange-100: #fdeee1;
-  --orange-200: #fcd9b8;
-  --orange-300: #fab895;
-  --orange-400: #f7976b;
-  --orange-500: #f47640;
-  --orange-600: #e85d1f;
-  --orange-700: #c64518;
-  --orange-800: #a43516;
-  --orange-900: #822814;
-
-  /* Peach Accents */
-  --peach-50: #fef6f2;
-  --peach-100: #fdeae0;
-  --peach-200: #fbd0b8;
-  --peach-300: #f8b090;
-  --peach-400: #f59068;
-  --peach-500: #f27040;
-
-  /* Warm Grays */
-  --gray-50: #fdfcfb;
-  --gray-100: #f8f6f4;
-  --gray-200: #efeae7;
-  --gray-300: #e6ded9;
-  --gray-400: #c8beb6;
-  --gray-500: #aa9e93;
-  --gray-600: #8c7e70;
-  --gray-700: #6e5e4d;
-  --gray-800: #503e2a;
-  --gray-900: #321e07;
+@theme {
+  --color-roast: #2a1d18; /* sangrai pekat */
+  --color-roast-2: #3d2b22;
+  --color-crema: #f4ece1; /* krem crema */
+  --color-crema-2: #e6d8c6;
+  --color-bean: #634c3c; /* teks sekunder */
+  --color-chalk-line: #a8811c; /* kuning kapur */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@layer base {
+  body { font-family: var(--font-jakarta), system-ui, sans-serif; background-color: var(--color-crema); color: var(--color-bean); }
+  h1, h2, h3 { font-family: var(--font-dmserif), Georgia, serif; letter-spacing: -0.02em; }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #ffffff;
-    --foreground: #321e07;
+.menu-label { font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; }
+.chalk-rule { height: 2px; background: currentColor; opacity: 0.45; border-radius: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Custom gradient classes */
-.gradient-primary {
-  background: linear-gradient(135deg, #fcd9b8, #fab895);
-}
-
-.gradient-secondary {
-  background: linear-gradient(135deg, #fdeee1, #fcd9b8);
-}
-
-.gradient-accent {
-  background: linear-gradient(135deg, #f7976b, #f47640);
-}
-
-.gradient-subtle {
-  background: linear-gradient(135deg, #fef7f0, #fdeee1);
+:where(a, button, input, textarea, select, summary):focus-visible {
+  outline: 2px solid var(--color-chalk-line);
+  outline-offset: 3px;
 }

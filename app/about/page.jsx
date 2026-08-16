@@ -25,11 +25,11 @@ export default function About() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-gray-100 pt-16 text-gray-800">
+    <section className="relative overflow-hidden bg-crema pt-16 text-roast">
       {/* Tombol Navigasi Home */}
       <div className="absolute top-6 left-6 z-50">
         <Link href="/">
-          <button className="flex items-center px-4 py-2 bg-gray-800 text-white rounded-full shadow-lg">
+          <button className="flex items-center px-4 py-2 bg-roast text-crema rounded-full shadow-lg">
             <HomeIcon className="w-6 h-6 mr-2" />
             Home
           </button>
@@ -48,30 +48,30 @@ export default function About() {
       <div className="relative z-10 px-6 lg:px-16 py-10 lg:py-16">
         {/* Overview Section */}
         <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true }} className="max-w-5xl mx-auto text-center">
-          <motion.h1 variants={fadeInUp} className="text-5xl lg:text-6xl font-extrabold mb-8 text-gray-900 tracking-tight">
+          <motion.h1 variants={fadeInUp} className="text-5xl lg:text-6xl font-extrabold mb-8 text-roast tracking-tight">
             Tentang Cissy Cafe
           </motion.h1>
-          <motion.p variants={fadeInUp} className="text-xl lg:text-2xl text-gray-700 leading-relaxed max-w-3xl mx-auto mb-12">
+          <motion.p variants={fadeInUp} className="text-xl lg:text-2xl text-roast leading-relaxed max-w-3xl mx-auto mb-12">
             Cissy Cafe lahir dari kecintaan terhadap kopi dan suasana yang nyaman. Dengan bahan berkualitas dan pelayanan terbaik, kami menciptakan pengalaman ngopi yang tak terlupakan.
           </motion.p>
         </motion.div>
 
         {/* Timeline */}
         <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true }} className="mt-20 max-w-6xl mx-auto">
-          <motion.h2 variants={fadeInUp} className="text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-12">
+          <motion.h2 variants={fadeInUp} className="text-4xl lg:text-5xl font-bold text-center text-roast mb-12">
             Perjalanan Kami
           </motion.h2>
           <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full border-l-2 border-gray-300"></div>
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full border-l-2 border-roast/12"></div>
             <div className="space-y-12">
               {milestones.map((milestone, idx) => (
                 <motion.div key={idx} variants={fadeInUp} className="relative flex flex-col md:flex-row items-center">
-                  <div className="w-16 h-16 bg-gray-700 rounded-full flex items-center justify-center text-white font-bold z-10">
+                  <div className="w-16 h-16 bg-roast rounded-full flex items-center justify-center text-crema font-bold z-10">
                     {milestone.year}
                   </div>
-                  <div className="mt-4 md:mt-0 md:ml-6 p-6 bg-white rounded-xl shadow-lg">
-                    <h4 className="text-2xl font-bold text-gray-800">{milestone.title}</h4>
-                    <p className="mt-2 text-gray-600">{milestone.description}</p>
+                  <div className="mt-4 md:mt-0 md:ml-6 p-6 bg-crema rounded-xl shadow-lg">
+                    <h4 className="text-2xl font-bold text-roast">{milestone.title}</h4>
+                    <p className="mt-2 text-bean">{milestone.description}</p>
                   </div>
                 </motion.div>
               ))}
@@ -81,17 +81,17 @@ export default function About() {
 
         {/* Team Section */}
         <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true }} className="mt-20 max-w-6xl mx-auto text-center">
-          <motion.h2 variants={fadeInUp} className="text-4xl lg:text-5xl font-bold text-gray-900 mb-12">
+          <motion.h2 variants={fadeInUp} className="text-4xl lg:text-5xl font-bold text-roast mb-12">
             Tim Profesional Kami
           </motion.h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {team.map((member, idx) => (
-              <motion.div key={idx} variants={fadeInUp} className="bg-white rounded-2xl shadow-lg p-6 transform transition-all hover:-translate-y-2 hover:shadow-xl">
+              <motion.div key={idx} variants={fadeInUp} className="bg-crema rounded-2xl shadow-lg p-6 transform transition-all hover:-translate-y-2 hover:shadow-xl">
                 <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4">
                   <img src={member.image} alt={member.name} className="object-cover w-full h-full" />
                 </div>
-                <h4 className="text-2xl font-bold text-gray-800">{member.name}</h4>
-                <p className="text-gray-600">{member.role}</p>
+                <h4 className="text-2xl font-bold text-roast">{member.name}</h4>
+                <p className="text-bean">{member.role}</p>
               </motion.div>
             ))}
           </div>

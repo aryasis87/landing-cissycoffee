@@ -185,13 +185,13 @@ export default function Analysis() {
   return (
     <section 
       id="analysis-section" 
-      className="relative w-full py-24 px-4 md:px-8 bg-gradient-to-br from-white via-orange-50 to-peach-50 overflow-hidden"
+      className="relative w-full py-24 px-4 md:px-8 bg-gradient-to-br from-white via-chalk-line to-chalk-line overflow-hidden"
     >
       {/* Enhanced Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full">
-        <div className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-orange-200/25 to-peach-200/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-tl from-coral-200/20 to-orange-200/15 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-gradient-to-r from-transparent via-orange-100/8 to-transparent rounded-full blur-2xl"></div>
+        <div className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-chalk-line/25 to-chalk-line/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-tl from-chalk-line/20 to-chalk-line/15 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-gradient-to-r from-transparent via-chalk-line/8 to-transparent rounded-full blur-2xl"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto">
@@ -204,12 +204,12 @@ export default function Analysis() {
         >
           {/* Pre-title Badge */}
           <motion.div
-            className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-orange-100 to-peach-100 rounded-full text-sm font-medium text-orange-700 shadow-sm mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-chalk-line to-chalk-line rounded-full text-sm font-medium text-chalk-line shadow-sm mb-8"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={isVisible ? { opacity: 1, scale: 1 } : {}}
             transition={{ delay: 0.2, duration: 0.6 }}
           >
-            <FaChartLine className="text-orange-500" />
+            <FaChartLine className="text-chalk-line" />
             Data Insights
           </motion.div>
 
@@ -220,10 +220,10 @@ export default function Analysis() {
             animate={isVisible ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            <span className="bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-crema-2 via-crema-2 to-crema-2 bg-clip-text text-transparent">
               Survey
             </span>{" "}
-            <span className="bg-gradient-to-r from-orange-500 via-orange-400 to-peach-400 bg-clip-text text-transparent font-extrabold">
+            <span className="bg-gradient-to-r from-chalk-line via-chalk-line to-chalk-line bg-clip-text text-transparent font-extrabold">
               Analysis
             </span>
           </motion.h2>
@@ -235,14 +235,14 @@ export default function Analysis() {
             animate={isVisible ? { scaleX: 1, opacity: 1 } : {}}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
-            <div className="h-0.5 w-20 bg-gradient-to-r from-transparent to-orange-300"></div>
-            <FaChartPie className="text-orange-400 text-xl" />
-            <div className="h-0.5 w-20 bg-gradient-to-l from-transparent to-orange-300"></div>
+            <div className="h-0.5 w-20 bg-gradient-to-r from-transparent to-chalk-line"></div>
+            <FaChartPie className="text-chalk-line text-xl" />
+            <div className="h-0.5 w-20 bg-gradient-to-l from-transparent to-chalk-line"></div>
           </motion.div>
 
           {/* Description */}
           <motion.p
-            className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-12"
+            className="text-lg md:text-xl text-bean max-w-4xl mx-auto leading-relaxed mb-12"
             initial={{ opacity: 0, y: 20 }}
             animate={isVisible ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.8, duration: 0.7 }}
@@ -264,33 +264,33 @@ export default function Analysis() {
               title: "Best Seller", 
               value: "Cappuccino", 
               subvalue: "5,200 cups", 
-              icon: <FaCoffee className="text-orange-500" />,
-              bg: "from-orange-100/80 to-orange-200/80",
-              border: "border-orange-200/50"
+              icon: <FaCoffee className="text-chalk-line" />,
+              bg: "from-chalk-line/80 to-chalk-line/80",
+              border: "border-chalk-line/50"
             },
             { 
               title: "Favorite Bean", 
               value: "Arabica", 
               subvalue: "65% preference", 
-              icon: <FaChartPie className="text-peach-400" />,
-              bg: "from-peach-100/80 to-peach-200/80",
-              border: "border-peach-200/50"
+              icon: <FaChartPie className="text-chalk-line" />,
+              bg: "from-chalk-line/80 to-chalk-line/80",
+              border: "border-chalk-line/30/50"
             },
             { 
               title: "Monthly Revenue", 
               value: "$9,100", 
               subvalue: "June 2024", 
-              icon: <FaDollarSign className="text-coral-400" />,
-              bg: "from-coral-100/80 to-coral-200/80",
-              border: "border-coral-200/50"
+              icon: <FaDollarSign className="text-chalk-line" />,
+              bg: "from-chalk-line/80 to-chalk-line/80",
+              border: "border-chalk-line/30/50"
             },
             { 
               title: "Customer Satisfaction", 
               value: "4.7/5", 
               subvalue: "1000+ reviews", 
-              icon: <FaUsers className="text-orange-400" />,
-              bg: "from-orange-100/80 to-orange-200/80",
-              border: "border-orange-200/50"
+              icon: <FaUsers className="text-chalk-line" />,
+              bg: "from-chalk-line/80 to-chalk-line/80",
+              border: "border-chalk-line/50"
             },
           ].map((metric, index) => (
             <motion.div
@@ -301,11 +301,11 @@ export default function Analysis() {
               <div className="flex items-center gap-3 mb-4">
                 <div className="text-2xl">{metric.icon}</div>
                 <div>
-                  <h3 className="font-semibold text-gray-800">{metric.title}</h3>
+                  <h3 className="font-semibold text-roast">{metric.title}</h3>
                 </div>
               </div>
-              <div className="text-2xl font-bold text-gray-800 mb-1">{metric.value}</div>
-              <div className="text-sm text-gray-600">{metric.subvalue}</div>
+              <div className="text-2xl font-bold text-roast mb-1">{metric.value}</div>
+              <div className="text-sm text-bean">{metric.subvalue}</div>
             </motion.div>
           ))}
         </motion.div>
@@ -323,8 +323,8 @@ export default function Analysis() {
               onClick={() => setActiveChart(tab.id)}
               className={`flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 activeChart === tab.id
-                  ? 'bg-gradient-to-r from-orange-400 to-orange-500 text-white shadow-lg'
-                  : 'bg-white text-gray-600 hover:bg-orange-50 hover:text-orange-600 shadow-md'
+                  ? 'bg-gradient-to-r from-chalk-line to-chalk-line text-crema shadow-lg'
+                  : 'bg-crema text-bean hover:bg-chalk-line/12 hover:text-chalk-line shadow-md'
               }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
@@ -337,21 +337,21 @@ export default function Analysis() {
 
         {/* Enhanced Chart Container */}
         <motion.div
-          className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl border border-orange-200/50 overflow-hidden"
+          className="bg-crema/90 backdrop-blur-xl rounded-3xl shadow-2xl border border-chalk-line/50 overflow-hidden"
           initial={{ opacity: 0, y: 60 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 1.4, duration: 0.8 }}
         >
           <div className="p-8">
             <div className="flex items-center gap-3 mb-6">
-              <div className="text-2xl text-orange-600">{chartTabs[activeChart].icon}</div>
-              <h3 className="text-2xl font-bold text-gray-800">{chartTabs[activeChart].name}</h3>
+              <div className="text-2xl text-chalk-line">{chartTabs[activeChart].icon}</div>
+              <h3 className="text-2xl font-bold text-roast">{chartTabs[activeChart].name}</h3>
             </div>
             
             <motion.div
               key={activeChart}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
               {renderChart()}
@@ -359,16 +359,16 @@ export default function Analysis() {
           </div>
 
           {/* Chart Legend/Info */}
-          <div className="bg-orange-50/50 p-6 border-t border-orange-200/30">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-600">
+          <div className="bg-chalk-line/50 p-6 border-t border-chalk-line/30">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-bean">
               <div>
-                <span className="font-semibold text-gray-800">Data Period:</span> Jan - Jun 2024
+                <span className="font-semibold text-roast">Data Period:</span> Jan - Jun 2024
               </div>
               <div>
-                <span className="font-semibold text-gray-800">Sample Size:</span> 1,000+ customers
+                <span className="font-semibold text-roast">Sample Size:</span> 1,000+ customers
               </div>
               <div>
-                <span className="font-semibold text-gray-800">Update:</span> Real-time tracking
+                <span className="font-semibold text-roast">Update:</span> Real-time tracking
               </div>
             </div>
           </div>
@@ -381,43 +381,43 @@ export default function Analysis() {
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 1.8, duration: 0.8 }}
         >
-          <div className="bg-gradient-to-br from-peach-50 to-coral-50 rounded-2xl p-8 border border-peach-200/50">
-            <h4 className="text-xl font-bold text-orange-700 mb-4 flex items-center gap-2">
-              <FaChartLine className="text-orange-500" />
+          <div className="bg-gradient-to-br from-chalk-line to-chalk-line rounded-2xl p-8 border border-chalk-line/30/50">
+            <h4 className="text-xl font-bold text-chalk-line mb-4 flex items-center gap-2">
+              <FaChartLine className="text-chalk-line" />
               Key Insights
             </h4>
-            <ul className="space-y-3 text-gray-700">
+            <ul className="space-y-3 text-roast">
               <li className="flex items-start gap-2">
-                <span className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0"></span>
+                <span className="w-2 h-2 bg-chalk-line rounded-full mt-2 flex-shrink-0"></span>
                 Cappuccino consistently outperforms other drinks with highest sales volume
               </li>
               <li className="flex items-start gap-2">
-                <span className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0"></span>
+                <span className="w-2 h-2 bg-chalk-line rounded-full mt-2 flex-shrink-0"></span>
                 Strong preference for Arabica beans among our customers (65%)
               </li>
               <li className="flex items-start gap-2">
-                <span className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0"></span>
+                <span className="w-2 h-2 bg-chalk-line rounded-full mt-2 flex-shrink-0"></span>
                 Steady revenue growth trend with peak in June 2024
               </li>
             </ul>
           </div>
 
-          <div className="bg-gradient-to-br from-orange-50 to-peach-50 rounded-2xl p-8 border border-orange-200/50">
-            <h4 className="text-xl font-bold text-orange-700 mb-4 flex items-center gap-2">
-              <FaChartLine className="text-orange-500" />
+          <div className="bg-gradient-to-br from-chalk-line to-chalk-line rounded-2xl p-8 border border-chalk-line/50">
+            <h4 className="text-xl font-bold text-chalk-line mb-4 flex items-center gap-2">
+              <FaChartLine className="text-chalk-line" />
               Recommendations
             </h4>
-            <ul className="space-y-3 text-gray-700">
+            <ul className="space-y-3 text-roast">
               <li className="flex items-start gap-2">
-                <span className="w-2 h-2 bg-coral-400 rounded-full mt-2 flex-shrink-0"></span>
+                <span className="w-2 h-2 bg-chalk-line rounded-full mt-2 flex-shrink-0"></span>
                 Focus marketing efforts on promoting Cappuccino variations
               </li>
               <li className="flex items-start gap-2">
-                <span className="w-2 h-2 bg-coral-400 rounded-full mt-2 flex-shrink-0"></span>
+                <span className="w-2 h-2 bg-chalk-line rounded-full mt-2 flex-shrink-0"></span>
                 Expand Arabica bean offerings to meet customer preferences
               </li>
               <li className="flex items-start gap-2">
-                <span className="w-2 h-2 bg-coral-400 rounded-full mt-2 flex-shrink-0"></span>
+                <span className="w-2 h-2 bg-chalk-line rounded-full mt-2 flex-shrink-0"></span>
                 Implement customer retention programs to sustain growth
               </li>
             </ul>

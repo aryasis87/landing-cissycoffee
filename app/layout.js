@@ -1,4 +1,5 @@
 import { DM_Serif_Display, Plus_Jakarta_Sans } from "next/font/google";
+import MotionProvider from "./components/MotionProvider";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 
@@ -44,7 +45,7 @@ export default function RootLayout({ children }) {
     <html lang="id">
       <body className={`${dmserif.variable} ${jakarta.variable} antialiased`}>
         <Navbar />
-        {children}
+        <MotionProvider>{children}</MotionProvider>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(__jsonld) }} />
         </body>
     </html>

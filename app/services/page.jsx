@@ -8,7 +8,7 @@ import { fadeInUp, fadeInLeft, fadeInRight, staggerContainer } from "../utils/an
 const services = [
   {
     icon: (
-      <svg className="w-12 h-12 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg className="w-12 h-12 text-bean" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
       </svg>
     ),
@@ -17,7 +17,7 @@ const services = [
   },
   {
     icon: (
-      <svg className="w-12 h-12 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg className="w-12 h-12 text-bean" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
@@ -26,7 +26,7 @@ const services = [
   },
   {
     icon: (
-      <svg className="w-12 h-12 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg className="w-12 h-12 text-bean" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 18.657A8 8 0 1112 16a8 8 0 015.657 2.657zm-2.536-5.354a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414-1.414l-3-3z" />
       </svg>
     ),
@@ -37,7 +37,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-gray-50 to-white py-26 px-6 lg:px-16">
+    <section className="relative overflow-hidden bg-gradient-to-br from-crema-2 to-white py-26 px-6 lg:px-16">
       
       {/* Tombol Home */}
       <div className="absolute top-6 left-6">
@@ -45,7 +45,7 @@ export default function Services() {
           <motion.button 
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className="flex items-center px-4 py-2 bg-gray-800 text-white rounded-full shadow-lg"
+            className="flex items-center px-4 py-2 bg-roast text-crema rounded-full shadow-lg"
           >
             <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9.5L12 3l9 6.5M4 10v10a1 1 0 001 1h4a1 1 0 001-1v-6h4v6a1 1 0 001 1h4a1 1 0 001-1V10" />
@@ -92,13 +92,13 @@ export default function Services() {
         >
           <motion.h1
             variants={fadeInUp}
-            className="text-5xl lg:text-6xl font-extrabold text-gray-900 mb-4"
+            className="text-5xl lg:text-6xl font-extrabold text-roast mb-4"
           >
             Layanan Kami
           </motion.h1>
           <motion.p
             variants={fadeInUp}
-            className="text-xl lg:text-2xl text-gray-700"
+            className="text-xl lg:text-2xl text-roast"
           >
             Solusi lengkap untuk kebutuhan perjalanan Anda dengan teknologi terkini dan layanan profesional.
           </motion.p>
@@ -116,20 +116,20 @@ export default function Services() {
               key={index}
               variants={fadeInUp}
               whileHover={{ scale: 1.05, rotate: 1 }}
-              className="p-8 bg-white rounded-3xl shadow-2xl hover:shadow-3xl transition-all transform hover:-translate-y-2"
+              className="p-8 bg-crema rounded-3xl shadow-2xl hover:shadow-3xl transition-all transform hover:-translate-y-2"
             >
               <div className="flex items-center justify-center mb-6">
                 {service.icon}
               </div>
               <motion.h3
                 variants={fadeInUp}
-                className="text-2xl font-bold mb-3 text-gray-800"
+                className="text-2xl font-bold mb-3 text-roast"
               >
                 {service.title}
               </motion.h3>
               <motion.p
                 variants={fadeInUp}
-                className="text-gray-600"
+                className="text-bean"
               >
                 {service.desc}
               </motion.p>
@@ -146,13 +146,13 @@ export default function Services() {
         >
           <motion.h2
             variants={fadeInUp}
-            className="text-4xl font-bold text-gray-900 mb-6"
+            className="text-4xl font-bold text-roast mb-6"
           >
             Mengapa Memilih Kami?
           </motion.h2>
           <motion.p
             variants={fadeInUp}
-            className="text-lg text-gray-700 max-w-3xl mx-auto"
+            className="text-lg text-roast max-w-3xl mx-auto"
           >
             Kami mengutamakan inovasi, kenyamanan, dan keamanan dalam setiap layanan.
             Dengan dukungan teknologi canggih dan tim profesional, kami memastikan setiap

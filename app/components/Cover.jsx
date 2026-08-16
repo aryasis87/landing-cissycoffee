@@ -22,11 +22,11 @@ export default function Cover() {
   if (!isClient) return null;
 
   return (
-    <section id="home" className="relative w-full max-w-screen h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative flex h-screen w-full max-w-screen items-center justify-center overflow-hidden bg-roast">
       {/* Simple Loading Skeleton */}
       {!isVideoLoaded && (
-        <div className="absolute inset-0 w-full h-full bg-orange-50 flex items-center justify-center">
-          <div className="w-16 h-16 border-4 border-orange-200 border-t-orange-400 rounded-full animate-spin"></div>
+        <div className="absolute inset-0 flex h-full w-full items-center justify-center bg-roast">
+          <div className="w-16 h-16 border-4 border-chalk-line/30 border-t-chalk-line rounded-full animate-spin"></div>
         </div>
       )}
 
@@ -45,11 +45,11 @@ export default function Cover() {
       </video>
 
       {/* Simple Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-800/40 to-gray-700/20"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-roast/85 via-roast/55 to-roast/30"></div>
 
       {/* Main Content */}
       <motion.div
-        className="relative z-10 text-center text-white px-6 md:px-12 max-w-4xl"
+        className="relative z-10 text-center text-crema px-6 md:px-12 max-w-4xl"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -59,10 +59,10 @@ export default function Cover() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.3, duration: 0.6 }}
-          className="inline-flex items-center px-4 py-2 mb-6 bg-orange-100/20 backdrop-blur-sm rounded-full border border-orange-200/30"
+          className="inline-flex items-center px-4 py-2 mb-6 bg-chalk-line/20 backdrop-blur-sm rounded-full border border-chalk-line/30"
         >
-          <div className="w-2 h-2 bg-orange-300 rounded-full mr-2 animate-pulse"></div>
-          <span className="text-sm font-medium text-orange-100">Premium Coffee Experience</span>
+          <div className="w-2 h-2 bg-chalk-line rounded-full mr-2 animate-pulse"></div>
+          <span className="text-sm font-medium text-crema">Premium Coffee Experience</span>
         </motion.div>
 
         {/* Title */}
@@ -76,18 +76,15 @@ export default function Cover() {
         >
           Selamat Datang<br />
           di{" "}
-          <span className="bg-gradient-to-r from-orange-200 via-orange-300 to-peach-200 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-chalk-line via-chalk-line to-chalk-line bg-clip-text text-transparent">
             Cissy Coffee
           </span>
         </motion.h1>
 
         {/* Description */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7, duration: 0.6 }}
-          className="text-lg md:text-xl text-orange-100 max-w-2xl mx-auto mb-8 leading-relaxed"
-        >
+        {/* Tanpa kunci opacity: paragraf pembuka harus terbaca walau animasinya
+            tidak sempat berjalan. */}
+        <motion.p className="mx-auto mb-8 max-w-2xl text-lg leading-relaxed text-crema md:text-xl">
           Dari biji kopi pilihan, racikan tangan barista berpengalaman, hingga
           suasana yang cozy dan instagrammable. Temukan kenikmatan dalam setiap
           tegukan!
@@ -101,7 +98,7 @@ export default function Cover() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           href="#about"
-          className="inline-block bg-gradient-to-r from-orange-400 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white font-semibold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition duration-300"
+          className="inline-block bg-gradient-to-r from-chalk-line to-chalk-line hover:from-chalk-line hover:to-chalk-line text-crema font-semibold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition duration-300"
         >
           Lihat Menu Kami
         </motion.a>
@@ -115,7 +112,7 @@ export default function Cover() {
           onClick={scrollToAbout}
           className="cursor-pointer"
         >
-          <ChevronDownIcon className="h-8 w-8 text-orange-200 hover:text-orange-100 transition duration-300" />
+          <ChevronDownIcon className="h-8 w-8 text-crema hover:text-crema transition duration-300" />
         </motion.div>
       </div>
     </section>

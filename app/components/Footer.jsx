@@ -52,43 +52,43 @@ export default function Footer() {
   ];
 
   const socialLinks = [
-    { icon: FaFacebookF, href: "#", color: "hover:bg-orange-500", name: "Facebook" },
-    { icon: FaInstagram, href: "#", color: "hover:bg-gradient-to-br hover:from-peach-400 hover:to-coral-400", name: "Instagram" },
-    { icon: FaTwitter, href: "#", color: "hover:bg-orange-400", name: "Twitter" },
-    { icon: FaLinkedinIn, href: "#", color: "hover:bg-orange-600", name: "LinkedIn" },
-    { icon: FaYoutube, href: "#", color: "hover:bg-coral-500", name: "YouTube" },
-    { icon: FaTiktok, href: "#", color: "hover:bg-gray-800", name: "TikTok" },
+    { icon: FaFacebookF, href: "#", color: "hover:bg-chalk-line", name: "Facebook" },
+    { icon: FaInstagram, href: "#", color: "hover:bg-gradient-to-br hover:from-chalk-line hover:to-chalk-line", name: "Instagram" },
+    { icon: FaTwitter, href: "#", color: "hover:bg-chalk-line", name: "Twitter" },
+    { icon: FaLinkedinIn, href: "#", color: "hover:bg-chalk-line", name: "LinkedIn" },
+    { icon: FaYoutube, href: "#", color: "hover:bg-chalk-line", name: "YouTube" },
+    { icon: FaTiktok, href: "#", color: "hover:bg-roast", name: "TikTok" },
   ];
 
   const contactInfo = [
     { 
       icon: FaMapMarkerAlt, 
       text: "Jl. Coffee Street No. 123, Jakarta Selatan, Indonesia 12345",
-      color: "text-coral-400"
+      color: "text-chalk-line"
     },
     { 
       icon: FaPhone, 
       text: "+62 089 8765 4321",
-      color: "text-peach-400"
+      color: "text-chalk-line"
     },
     { 
       icon: FaEnvelope, 
       text: "hello@cissycoffee.com",
-      color: "text-orange-400"
+      color: "text-chalk-line"
     },
     { 
       icon: FaClock, 
       text: "Mon - Sun: 07:00 AM - 10:00 PM",
-      color: "text-orange-500"
+      color: "text-chalk-line"
     },
   ];
 
   return (
-    <footer className="relative bg-gradient-to-br from-gray-50 via-white to-orange-50 text-gray-800 overflow-hidden">
+    <footer className="relative bg-gradient-to-br from-crema-2 via-white to-chalk-line text-roast overflow-hidden">
       {/* Enhanced Background Effects */}
       <div className="absolute top-0 left-0 w-full h-full">
-        <div className="absolute top-20 right-20 w-80 h-80 bg-gradient-to-br from-orange-200/20 to-peach-200/15 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-20 w-96 h-96 bg-gradient-to-tl from-coral-200/15 to-orange-200/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 right-20 w-80 h-80 bg-gradient-to-br from-chalk-line/20 to-chalk-line/15 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-20 w-96 h-96 bg-gradient-to-tl from-chalk-line/15 to-chalk-line/10 rounded-full blur-3xl"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-6 py-16">
@@ -105,34 +105,34 @@ export default function Footer() {
           >
             {/* Logo */}
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-orange-300 to-orange-400 rounded-xl flex items-center justify-center shadow-lg">
-                <FaCoffee className="text-white text-xl" />
+              <div className="w-12 h-12 bg-gradient-to-br from-chalk-line to-chalk-line rounded-xl flex items-center justify-center shadow-lg">
+                <FaCoffee className="text-crema text-xl" />
               </div>
               <div>
-                <h3 className="text-2xl font-bold bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
+                <h3 className="text-2xl font-bold bg-gradient-to-r from-chalk-line to-chalk-line bg-clip-text text-transparent">
                   Cissy Coffee
                 </h3>
-                <p className="text-xs text-gray-500">Premium Coffee Experience</p>
+                <p className="text-xs text-bean">Premium Coffee Experience</p>
               </div>
             </div>
 
             {/* Brand Description */}
-            <p className="text-gray-600 text-sm leading-relaxed mb-6">
+            <p className="text-bean text-sm leading-relaxed mb-6">
               Menghadirkan pengalaman kopi premium dengan cita rasa autentik dan suasana yang hangat. 
               Setiap cangkir dibuat dengan dedikasi untuk memberikan momen terbaik bagi Anda.
             </p>
 
             {/* Newsletter Signup */}
             <div className="mb-6">
-              <p className="text-sm text-gray-500 mb-3">Subscribe to our newsletter</p>
+              <p className="text-sm text-bean mb-3">Subscribe to our newsletter</p>
               <div className="flex gap-2">
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 bg-orange-50/50 border border-orange-200/50 rounded-lg px-3 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-300/50 transition-all duration-300"
+                  className="flex-1 bg-chalk-line/50 border border-chalk-line/50 rounded-lg px-3 py-2 text-sm text-roast placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-chalk-line/50 transition-all duration-300"
                 />
                 <motion.button
-                  className="bg-gradient-to-r from-orange-400 to-orange-500 px-4 py-2 rounded-lg text-sm font-semibold text-white hover:shadow-lg transition-all duration-300"
+                  className="bg-gradient-to-r from-chalk-line to-chalk-line px-4 py-2 rounded-lg text-sm font-semibold text-crema hover:shadow-lg transition-all duration-300"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -151,22 +151,22 @@ export default function Footer() {
               transition={{ duration: 0.6, delay: 0.1 * (index + 1) }}
               viewport={{ once: true }}
             >
-              <h4 className="text-lg font-semibold text-gray-800 mb-6 relative">
+              <h4 className="text-lg font-semibold text-roast mb-6 relative">
                 {section.title}
-                <div className="absolute bottom-0 left-0 w-8 h-0.5 bg-gradient-to-r from-orange-300 to-orange-400 rounded-full"></div>
+                <div className="absolute bottom-0 left-0 w-8 h-0.5 bg-gradient-to-r from-chalk-line to-chalk-line rounded-full"></div>
               </h4>
               <ul className="space-y-3">
                 {section.links.map((link, linkIndex) => (
                   <motion.li
                     key={link.name}
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, delay: 0.05 * linkIndex }}
                     viewport={{ once: true }}
                   >
                     <a
                       href={link.href}
-                      className="text-gray-600 hover:text-orange-600 text-sm transition-colors duration-300 flex items-center group"
+                      className="text-bean hover:text-chalk-line text-sm transition-colors duration-300 flex items-center group"
                     >
                       <span className="group-hover:translate-x-1 transition-transform duration-300">
                         {link.name}
@@ -181,13 +181,13 @@ export default function Footer() {
 
         {/* Enhanced Contact Information */}
         <motion.div
-          className="bg-gradient-to-r from-orange-50/80 to-peach-50/80 backdrop-blur-sm rounded-2xl p-8 border border-orange-200/30 mb-12"
+          className="bg-gradient-to-r from-chalk-line/80 to-chalk-line/80 backdrop-blur-sm rounded-2xl p-8 border border-chalk-line/30 mb-12"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h4 className="text-xl font-semibold text-gray-800 mb-6 text-center">Get In Touch</h4>
+          <h4 className="text-xl font-semibold text-roast mb-6 text-center">Get In Touch</h4>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {contactInfo.map((info, index) => (
               <motion.div
@@ -200,7 +200,7 @@ export default function Footer() {
                   <info.icon />
                 </div>
                 <div>
-                  <p className="text-gray-600 text-sm leading-relaxed">{info.text}</p>
+                  <p className="text-bean text-sm leading-relaxed">{info.text}</p>
                 </div>
               </motion.div>
             ))}
@@ -208,7 +208,7 @@ export default function Footer() {
         </motion.div>
 
         {/* Enhanced Social Media & Bottom Bar */}
-        <div className="border-t border-orange-200/50 pt-8">
+        <div className="border-t border-chalk-line/50 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             
             {/* Social Media Links */}
@@ -219,12 +219,12 @@ export default function Footer() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <span className="text-gray-500 text-sm mr-2">Follow us:</span>
+              <span className="text-bean text-sm mr-2">Follow us:</span>
               {socialLinks.map((social, index) => (
                 <motion.a
                   key={social.name}
                   href={social.href}
-                  className={`w-10 h-10 bg-orange-100/70 ${social.color} rounded-full flex items-center justify-center transition-all duration-300 group border border-orange-200/30`}
+                  className={`w-10 h-10 bg-chalk-line/70 ${social.color} rounded-full flex items-center justify-center transition-all duration-300 group border border-chalk-line/30`}
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                   initial={{ opacity: 0, y: 20 }}
@@ -233,7 +233,7 @@ export default function Footer() {
                   viewport={{ once: true }}
                   aria-label={social.name}
                 >
-                  <social.icon className="text-sm text-gray-600 group-hover:text-white transition-colors duration-300" />
+                  <social.icon className="text-sm text-bean group-hover:text-crema transition-colors duration-300" />
                 </motion.a>
               ))}
             </motion.div>
@@ -246,9 +246,9 @@ export default function Footer() {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <p className="text-gray-500 text-sm flex items-center justify-center md:justify-start gap-1">
+              <p className="text-bean text-sm flex items-center justify-center md:justify-start gap-1">
                 © {new Date().getFullYear()} Cissy Coffee. Made with 
-                <FaHeart className="text-coral-400 text-xs animate-pulse" />
+                <FaHeart className="text-chalk-line text-xs animate-pulse" />
                 All Rights Reserved.
               </p>
             </motion.div>
@@ -256,7 +256,7 @@ export default function Footer() {
             {/* Back to Top Button */}
             <motion.button
               onClick={scrollToTop}
-              className="w-10 h-10 bg-gradient-to-r from-orange-400 to-orange-500 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 group"
+              className="w-10 h-10 bg-gradient-to-r from-chalk-line to-chalk-line rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 group"
               whileHover={{ scale: 1.1, y: -2 }}
               whileTap={{ scale: 0.95 }}
               initial={{ opacity: 0, rotate: -180 }}
@@ -265,20 +265,20 @@ export default function Footer() {
               viewport={{ once: true }}
               aria-label="Back to top"
             >
-              <FaArrowUp className="text-sm text-white group-hover:translate-y-[-2px] transition-transform duration-300" />
+              <FaArrowUp className="text-sm text-crema group-hover:translate-y-[-2px] transition-transform duration-300" />
             </motion.button>
           </div>
         </div>
 
         {/* Enhanced Bottom Credits */}
         <motion.div
-          className="text-center mt-8 pt-6 border-t border-orange-200/30"
+          className="text-center mt-8 pt-6 border-t border-chalk-line/30"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <div className="flex flex-col md:flex-row justify-center items-center gap-4 text-xs text-gray-500">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-4 text-xs text-bean">
             <span>Designed & Developed with passion for coffee lovers</span>
             <span className="hidden md:inline">•</span>
             <span>Brewing excellence since 2019</span>
@@ -289,9 +289,9 @@ export default function Footer() {
       </div>
 
       {/* Scroll Progress Indicator */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-orange-100">
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-chalk-line/12">
         <motion.div
-          className="h-full bg-gradient-to-r from-orange-300 to-orange-400"
+          className="h-full bg-gradient-to-r from-chalk-line to-chalk-line"
           style={{
             scaleX: typeof window !== 'undefined' ? window.scrollY / (document.body.scrollHeight - window.innerHeight) : 0
           }}
