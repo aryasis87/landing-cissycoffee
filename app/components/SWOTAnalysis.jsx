@@ -323,7 +323,7 @@ export default function Analysis() {
               onClick={() => setActiveChart(tab.id)}
               className={`flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 activeChart === tab.id
-                  ? 'bg-gradient-to-r from-chalk-line to-chalk-line text-crema shadow-lg'
+                  ? 'bg-gradient-to-r from-chalk-line to-chalk-line text-roast shadow-lg'
                   : 'bg-crema text-bean hover:bg-chalk-line/12 hover:text-chalk-line shadow-md'
               }`}
               whileHover={{ scale: 1.05 }}

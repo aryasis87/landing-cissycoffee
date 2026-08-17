@@ -308,7 +308,7 @@ const FoodMenuGrid = () => {
                 onClick={() => setSelectedCategory(category.id)}
                 className={`flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                   selectedCategory === category.id
-                    ? 'bg-gradient-to-r from-chalk-line to-chalk-line text-crema shadow-lg scale-105'
+                    ? 'bg-gradient-to-r from-chalk-line to-chalk-line text-roast shadow-lg scale-105'
                     : 'bg-crema text-bean hover:bg-chalk-line/12 hover:text-chalk-line shadow-md hover:shadow-lg'
                 }`}
                 whileHover={{ scale: 1.05 }}
@@ -432,7 +432,7 @@ const FoodMenuGrid = () => {
                         {item.price}
                       </div>
                       <motion.button
-                        className="bg-gradient-to-r from-chalk-line to-chalk-line hover:from-chalk-line hover:to-chalk-line text-crema px-4 py-2 rounded-full text-sm font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                        className="bg-gradient-to-r from-chalk-line to-chalk-line hover:from-chalk-line hover:to-chalk-line text-roast px-4 py-2 rounded-full text-sm font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                       >

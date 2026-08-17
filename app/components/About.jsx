@@ -183,7 +183,7 @@ export default function About() {
             <p className="text-lg md:text-xl text-roast leading-relaxed font-light">
               Cissy Cafe adalah tempat di mana kopi berkualitas, suasana hangat, dan momen berharga bertemu. Setiap cangkir yang kami sajikan dipilih dari biji kopi terbaik dan diracik dengan keahlian tinggi.
             </p>
-            <p className="text-base md:text-lg text-bean leading-relaxed">
+            <p className="text-base leading-relaxed text-roast md:text-lg">
               Nikmati pengalaman kopi yang tak terlupakan dalam lingkungan yang cozy, modern, dan penuh dengan cerita-cerita indah dari setiap pelanggan kami.
             </p>
           </motion.div>
@@ -218,7 +218,7 @@ export default function About() {
           >
             <a
               href="/contact"
-              className="group inline-flex items-center gap-3 bg-gradient-to-r from-chalk-line to-chalk-line hover:from-chalk-line hover:to-chalk-line text-crema font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+              className="group inline-flex items-center gap-3 bg-gradient-to-r from-chalk-line to-chalk-line hover:from-chalk-line hover:to-chalk-line text-roast font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
             >
               <span>Lebih Lanjut</span>
               <div className="w-5 h-5 bg-crema/20 rounded-full flex items-center justify-center group-hover:translate-x-1 transition-transform duration-300">

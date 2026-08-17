@@ -162,7 +162,7 @@ const Menu = () => {
                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                   />
                   {/* Enhanced Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-crema-2/90 via-crema-2/50 to-crema-2/30 opacity-70 group-hover:opacity-90 transition-all duration-500"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-roast/95 via-roast/80 to-roast/55 opacity-70 group-hover:opacity-90 transition-all duration-500"></div>
                 </div>
               )}
 
@@ -201,7 +201,7 @@ const Menu = () => {
                 >
                   {/* Role Badge */}
                   <motion.div
-                    className="inline-flex items-center px-3 py-1 bg-gradient-to-r from-chalk-line/90 to-chalk-line/90 backdrop-blur-sm rounded-full text-xs font-medium text-crema mb-3 border border-chalk-line/30"
+                    className="inline-flex items-center px-3 py-1 bg-gradient-to-r from-chalk-line/90 to-chalk-line/90 backdrop-blur-sm rounded-full text-xs font-medium text-roast mb-3 border border-chalk-line/30"
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.3 }}
@@ -210,7 +210,7 @@ const Menu = () => {
                   </motion.div>
 
                   {/* Name */}
-                  <h3 className="text-xl md:text-2xl font-bold mb-2 group-hover:text-crema transition-colors duration-300">
+                  <h3 className="mb-2 text-xl font-bold text-roast transition-colors duration-300 md:text-2xl">
                     {member.name}
                   </h3>
 
@@ -230,7 +230,7 @@ const Menu = () => {
                     {member.expertise.map((skill, skillIndex) => (
                       <span
                         key={skillIndex}
-                        className="px-2 py-1 bg-chalk-line/20 backdrop-blur-sm rounded-full text-xs text-chalk-line border border-chalk-line/30"
+                        className="px-2 py-1 bg-roast/85 backdrop-blur-sm rounded-full text-xs text-crema border border-crema/30"
                       >
                         {skill}
                       </span>
@@ -262,7 +262,7 @@ const Menu = () => {
           
           <motion.a
             href="#founder-section"
-            className="group inline-flex items-center gap-3 bg-gradient-to-r from-chalk-line to-chalk-line hover:from-chalk-line hover:to-chalk-line text-crema font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+            className="group inline-flex items-center gap-3 bg-gradient-to-r from-chalk-line to-chalk-line hover:from-chalk-line hover:to-chalk-line text-roast font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
           >

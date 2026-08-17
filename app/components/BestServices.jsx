@@ -97,7 +97,7 @@ export default function BestService() {
         >
           {/* Pre-title Badge */}
           <motion.div
-            className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-chalk-line/20 to-chalk-line/20 rounded-full text-sm font-medium text-crema shadow-lg mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-chalk-line/20 to-chalk-line/20 rounded-full text-sm font-medium text-roast shadow-lg mb-8"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={isVisible ? { opacity: 1, scale: 1 } : {}}
             transition={{ delay: 0.2, duration: 0.6 }}
@@ -278,7 +278,7 @@ export default function BestService() {
             >
               <Link
                 href="/contact"
-                className="group bg-gradient-to-r from-chalk-line to-chalk-line hover:from-chalk-line hover:to-chalk-line text-crema font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-3"
+                className="group bg-gradient-to-r from-chalk-line to-chalk-line hover:from-chalk-line hover:to-chalk-line text-roast font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-3"
               >
                 <span>Get Free Consultation</span>
                 <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />

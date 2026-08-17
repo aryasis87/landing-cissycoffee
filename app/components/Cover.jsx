@@ -98,7 +98,7 @@ export default function Cover() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           href="#about"
-          className="inline-block bg-gradient-to-r from-chalk-line to-chalk-line hover:from-chalk-line hover:to-chalk-line text-crema font-semibold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition duration-300"
+          className="inline-block bg-gradient-to-r from-chalk-line to-chalk-line hover:from-chalk-line hover:to-chalk-line text-roast font-semibold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition duration-300"
         >
           Lihat Menu Kami
         </motion.a>

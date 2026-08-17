@@ -132,7 +132,7 @@ export default function Footer() {
                   className="flex-1 bg-chalk-line/50 border border-chalk-line/50 rounded-lg px-3 py-2 text-sm text-roast placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-chalk-line/50 transition-all duration-300"
                 />
                 <motion.button
-                  className="bg-gradient-to-r from-chalk-line to-chalk-line px-4 py-2 rounded-lg text-sm font-semibold text-crema hover:shadow-lg transition-all duration-300"
+                  className="bg-gradient-to-r from-chalk-line to-chalk-line px-4 py-2 rounded-lg text-sm font-semibold text-roast hover:shadow-lg transition-all duration-300"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
