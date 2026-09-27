@@ -201,7 +201,7 @@ export default function Contact() {
                 variants={fadeInUp}
                 className="text-chalk-line text-center"
               >
-                Pesan berhasil terkirim!
+                WhatsApp sudah dibuka. Tekan kirim di sana agar pesan Anda sampai.
               </motion.p>
             )}
             {status === "error" && (
