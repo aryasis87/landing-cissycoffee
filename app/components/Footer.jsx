@@ -7,8 +7,7 @@ import {
   FaTwitter, 
   FaYoutube,
   FaTiktok,
-  FaMapMarkerAlt,
-  FaPhone,
+  FaMapMarkerAlt,
   FaEnvelope,
   FaClock,
   FaCoffee,
@@ -64,11 +63,6 @@ export default function Footer() {
     { 
       icon: FaMapMarkerAlt, 
       text: "Jl. Coffee Street No. 123, Jakarta Selatan, Indonesia 12345",
-      color: "text-chalk-line"
-    },
-    { 
-      icon: FaPhone, 
-      text: "+62 089 8765 4321",
       color: "text-chalk-line"
     },
     { 

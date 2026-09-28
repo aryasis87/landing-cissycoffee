@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { fadeInUp, staggerContainer, fadeInLeft, fadeInRight } from "../utils/animation";
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaEnvelope, FaMapMarkerAlt, FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 import Link from "next/link";
 
 export default function Contact() {
@@ -16,17 +16,7 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // Format pesan untuk WhatsApp
-    const messageText = `Halo, saya ${formData.name} (${formData.email}). ${formData.message}`;
-    const encodedText = encodeURIComponent(messageText);
-    // Ubah nomor tujuan: 081217811062 -> 6281217811062
-    const whatsappNumber = "6281217811062";
-    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedText}`;
-
-    // Buka link WhatsApp di tab baru
-    window.open(whatsappURL, "_blank");
-
-    // Set status sukses dan reset form
+    // Halaman contoh: pesan tidak dikirim ke mana pun (lihat pesan sukses).
     setStatus("success");
     setFormData({ name: "", email: "", message: "" });
   };
@@ -69,8 +59,8 @@ export default function Contact() {
             </linearGradient>
           </defs>
           <rect width="800" height="600" fill="url(#contactBgGradient)" />
-          <circle cx="200" cy="100" r="80" fill="#e0f2fe" opacity="0.5" />
-          <circle cx="600" cy="500" r="120" fill="#bae6fd" opacity="0.3" />
+          <circle cx="200" cy="100" r="80" fill="#e6d8c6" opacity="0.5" />
+          <circle cx="600" cy="500" r="120" fill="#a8811c" opacity="0.12" />
         </svg>
       </motion.div>
 
@@ -93,7 +83,7 @@ export default function Contact() {
             variants={fadeInUp}
             className="text-xl lg:text-2xl text-roast"
           >
-            Kami siap membantu Anda 24/7. Hubungi kami melalui informasi di bawah ini atau
+            Kami siap membantu Anda setiap hari, pukul 07.00–22.00. Hubungi kami melalui informasi di bawah ini atau
             kirimkan pesan langsung.
           </motion.p>
         </motion.div>
@@ -113,22 +103,15 @@ export default function Contact() {
               <div>
                 <h3 className="text-2xl font-bold text-roast">Alamat</h3>
                 <p className="text-bean">
-                  Jl. Penerbangan No. 123, Jakarta, Indonesia
+                  Jl. Coffee Street No. 123, Jakarta Selatan, Indonesia 12345
                 </p>
-              </div>
-            </div>
-            <div className="flex items-center space-x-4">
-              <FaPhoneAlt className="text-3xl text-bean" />
-              <div>
-                <h3 className="text-2xl font-bold text-roast">Telepon</h3>
-                <p className="text-bean">+62 21 12345678</p>
               </div>
             </div>
             <div className="flex items-center space-x-4">
               <FaEnvelope className="text-3xl text-bean" />
               <div>
                 <h3 className="text-2xl font-bold text-roast">Email</h3>
-                <p className="text-bean">info@skywings.co.id</p>
+                <p className="text-bean">hello@cissycoffee.com</p>
               </div>
             </div>
             {/* Social Media Links */}
@@ -201,7 +184,7 @@ export default function Contact() {
                 variants={fadeInUp}
                 className="text-chalk-line text-center"
               >
-                WhatsApp sudah dibuka. Tekan kirim di sana agar pesan Anda sampai.
+                Terima kasih! Ini halaman contoh, jadi pesan Anda tidak dikirim ke mana pun.
               </motion.p>
             )}
             {status === "error" && (
@@ -223,7 +206,7 @@ export default function Contact() {
           <div className="relative pb-[56.25%]">
             <iframe
               title="Lokasi Kami - Surabaya"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.663754987682!2d112.75208841413295!3d-7.257472194090371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7e9c70d2b1e0f%3A0xdcc3a1c4b8a35b45!2sSurabaya%2C%20Jawa%20Timur%2C%20Indonesia!5e0!3m2!1sid!2sid!4v1684280000000!5m2!1sid!2sid"
+              src="https://www.google.com/maps?q=Jakarta%20Selatan&output=embed"
               className="absolute top-0 left-0 w-full h-full border-0"
               allowFullScreen=""
               loading="lazy"

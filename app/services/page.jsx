@@ -12,8 +12,8 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
       </svg>
     ),
-    title: "Pemesanan Tiket",
-    desc: "Pemesanan cepat dengan sistem real-time"
+    title: "Pesan & Bayar Online",
+    desc: "Pesan dari meja atau rumah, bayar non-tunai tanpa antre"
   },
   {
     icon: (
@@ -21,17 +21,17 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
-    title: "Jadwal Fleksibel",
-    desc: "Ubah jadwal tanpa biaya tambahan"
+    title: "Buka Setiap Hari",
+    desc: "Senin–Minggu, 07.00–22.00. Pas untuk kerja, rapat kecil, atau nongkrong"
   },
   {
     icon: (
       <svg className="w-12 h-12 text-bean" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 18.657A8 8 0 1112 16a8 8 0 015.657 2.657zm-2.536-5.354a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414-1.414l-3-3z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 9h12v4a5 5 0 01-5 5H9a5 5 0 01-5-5V9zm12 1h1.5a2.5 2.5 0 010 5H16M8 3v3m4-3v3M3 21h14" />
       </svg>
     ),
-    title: "Check-in Online",
-    desc: "Proses check-in hanya 2 menit"
+    title: "Biji Kopi untuk Dibawa Pulang",
+    desc: "Pilih biji sangrai kami dan minta digiling sesuai alat seduh Anda"
   },
 ];
 
@@ -75,9 +75,9 @@ export default function Services() {
             </linearGradient>
           </defs>
           <rect width="800" height="600" fill="url(#servicesBgGradient)" />
-          <path d="M0,200 C200,100 600,300 800,200 L800,600 L0,600 Z" fill="#e0f2fe" opacity="0.2" />
-          <circle cx="100" cy="100" r="50" fill="#bae6fd" opacity="0.3" />
-          <circle cx="700" cy="500" r="70" fill="#c7d2fe" opacity="0.3" />
+          <path d="M0,200 C200,100 600,300 800,200 L800,600 L0,600 Z" fill="#e6d8c6" opacity="0.35" />
+          <circle cx="100" cy="100" r="50" fill="#e6d8c6" opacity="0.5" />
+          <circle cx="700" cy="500" r="70" fill="#a8811c" opacity="0.15" />
         </svg>
       </motion.div>
 
@@ -100,7 +100,7 @@ export default function Services() {
             variants={fadeInUp}
             className="text-xl lg:text-2xl text-roast"
           >
-            Solusi lengkap untuk kebutuhan perjalanan Anda dengan teknologi terkini dan layanan profesional.
+            Dari secangkir kopi di meja sampai biji kopi untuk dibawa pulang, semuanya kami siapkan dengan teliti.
           </motion.p>
         </motion.div>
 
@@ -154,9 +154,9 @@ export default function Services() {
             variants={fadeInUp}
             className="text-lg text-roast max-w-3xl mx-auto"
           >
-            Kami mengutamakan inovasi, kenyamanan, dan keamanan dalam setiap layanan.
-            Dengan dukungan teknologi canggih dan tim profesional, kami memastikan setiap
-            perjalanan Anda berjalan dengan lancar dan menyenangkan.
+            Kami memilih biji kopi dari petani lokal, menyangrainya dalam jumlah kecil,
+            dan menyeduhnya dengan takaran yang teliti. Hasilnya, setiap cangkir terasa
+            konsisten dari kunjungan pertama sampai yang kesekian.
           </motion.p>
         </motion.div>
       </div>
