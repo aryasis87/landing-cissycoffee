@@ -1,119 +1,40 @@
-"use client";
-import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
-import { HomeIcon, UserIcon, PhoneIcon } from "@heroicons/react/24/solid";
-import { FaCoffee } from "react-icons/fa";
+import Link from 'next/link';
 
-export default function Navbar() {
-  const [isNavbarFixed, setIsNavbarFixed] = useState(false);
-  const [activeSection, setActiveSection] = useState("home");
-
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-
-    let ticking = false;
-    const sections = navItems.map(item => item.id);
-
-    const handleScroll = () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          const scrollY = window.scrollY;
-          setIsNavbarFixed(scrollY > 80);
-
-          let newActiveSection = "home"; // Default
-          for (const section of sections) {
-            const el = document.getElementById(section);
-            if (el && scrollY >= el.offsetTop - 100) {
-              newActiveSection = section;
-            }
-          }
-
-          if (newActiveSection !== activeSection) {
-            setActiveSection(newActiveSection);
-          }
-
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [activeSection]); // Hanya update jika activeSection berubah
-
-  // Efek scroll halus saat klik ikon navbar
-  useEffect(() => {
-    const links = document.querySelectorAll("a[href^='#']");
-    links.forEach(link => {
-      link.addEventListener("click", (e) => {
-        e.preventDefault();
-        const targetId = link.getAttribute("href").substring(1);
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-          window.scrollTo({
-            top: targetElement.offsetTop - 0,
-            behavior: "smooth",
-          });
-        }
-      });
-    });
-
-    return () => {
-      links.forEach(link => link.removeEventListener("click", () => {}));
-    };
-  }, []);
-
-  return (
-    <motion.nav
-      initial={{ opacity: 0, y: -30, scale: 0.95 }}
-      animate={{ opacity: 1, y: 0, scale: 1 }}
-      transition={{ duration: 0.8, ease: "anticipate" }}
-      className={`fixed top-3 md:top-4 lg:top-5 left-1/2 -translate-x-1/2 p-3 rounded-full flex space-x-4 md:space-x-5 lg:space-x-6 z-50 transition-all duration-300 ${
-        isNavbarFixed 
-          ? "bg-crema/90 backdrop-blur-lg shadow-lg border border-chalk-line/50" 
-          : "bg-crema/70 backdrop-blur-md border border-chalk-line/30"
-      }`}
-    >
-      {navItems.map((item, index) => (
-        <NavItem key={item.id} {...item} isActive={activeSection === item.id} delay={index * 0.4} />
-      ))}
-    </motion.nav>
-  );
-}
-
-// Data menu navbar
-const navItems = [
-  { id: "home", label: "Beranda", icon: <HomeIcon className="h-5 w-5 md:h-6 md:w-6 lg:h-7 lg:w-7" /> },
-  { id: "about", label: "Tentang", icon: <UserIcon className="h-5 w-5 md:h-6 md:w-6 lg:h-7 lg:w-7" /> },
-  { id: "founder-section", label: "Kontak", icon: <PhoneIcon className="h-5 w-5 md:h-6 md:w-6 lg:h-7 lg:w-7" /> },
-  { id: "coffee-menu", label: "Coffee Menu", icon: <FaCoffee className="h-5 w-5 md:h-6 md:w-6 lg:h-7 lg:w-7" /> },
+const NAV = [
+  ['/menu', 'Menu'],
+  ['/tentang', 'Tentang'],
+  ['/acara', 'Kopi untuk acara'],
+  ['/kontak', 'Kontak'],
 ];
 
-// Komponen NavItem dengan efek masuk yang lebih smooth
-const NavItem = ({ id, label, icon, isActive, delay }) => {
+export default function Navbar() {
   return (
-    <motion.a
-      href={`#${id}`}
-      initial={{ opacity: 0, y: -10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay, ease: "easeOut" }}
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.95 }}
-      className={`relative p-2 rounded-full transition duration-300 focus:outline-none focus:ring-2 focus:ring-chalk-line/50 ${
-        isActive 
-          ? "text-chalk-line bg-chalk-line/50" 
-          : "text-bean hover:bg-chalk-line/12 hover:text-chalk-line"
-      }`}
-      aria-label={label}
-    >
-      {icon}
-      {isActive && (
-        <motion.div
-          layoutId="underline"
-          className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3 h-1 bg-gradient-to-r from-chalk-line to-chalk-line rounded-full"
-        />
-      )}
-    </motion.a>
+    <header className="fixed inset-x-0 top-0 z-40 border-b border-roast/10 bg-crema/90 backdrop-blur-md">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-6 px-6">
+        <Link href="/" className="font-[family-name:var(--font-dmserif)] text-2xl text-roast">
+          Cissy <span className="kapur text-[1.6rem] text-[#8a6610]">Coffee</span>
+        </Link>
+        <nav aria-label="Navigasi utama" className="hidden items-center gap-8 md:flex">
+          {NAV.map(([href, label]) => (
+            <Link key={href} href={href} className="menu-label text-bean/80 transition-colors hover:text-roast">
+              {label}
+            </Link>
+          ))}
+        </nav>
+        <Link href="/kontak" className="hidden bg-roast px-4 py-2.5 text-sm font-semibold text-crema hover:bg-roast-2 md:inline-flex">
+          Arah ke kedai
+        </Link>
+        <details className="group relative md:hidden">
+          <summary className="menu-label flex cursor-pointer list-none items-center gap-2 border border-roast/25 px-3 py-2 text-roast [&::-webkit-details-marker]:hidden">
+            Menu <span aria-hidden="true" className="transition-transform group-open:rotate-180">▾</span>
+          </summary>
+          <nav aria-label="Navigasi ponsel" className="absolute right-0 mt-2 w-56 border border-roast/15 bg-crema p-2 shadow-lg">
+            {NAV.map(([href, label]) => (
+              <Link key={href} href={href} className="block px-3 py-2.5 text-roast hover:bg-crema-2">{label}</Link>
+            ))}
+          </nav>
+        </details>
+      </div>
+    </header>
   );
-};
+}

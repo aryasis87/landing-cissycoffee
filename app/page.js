@@ -1,25 +1,13 @@
-import Cover from "./components/Cover";
-import About from "./components/About";
-import Menu from "./components/Menu";
-import BestServices from "./components/BestServices";
-import SWOTAnalysis from "./components/SWOTAnalysis";
-import Testimonials from "./components/Testimonials";
-import Footer from "./components/Footer";
-import CoffeeMenu from "./components/CoffeeMenu";
-import FoodMenuGrid from "./components/FoodMenuGrid";
+import { AcaraTeaser, BijiMingguIni, Hero, MenuRingkas, Ruang } from "./components/Beranda";
 
 export default function Home() {
   return (
     <main>
-      <Cover />
-      <About />
-      <Menu />
-      <CoffeeMenu />
-      <FoodMenuGrid />
-      <BestServices />
-      <Testimonials />
-      <SWOTAnalysis />
-      <Footer />
+      <Hero />
+      <BijiMingguIni />
+      <MenuRingkas />
+      <Ruang />
+      <AcaraTeaser />
     </main>
   );
 }
